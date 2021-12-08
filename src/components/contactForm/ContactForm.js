@@ -12,32 +12,38 @@ export const ContactForm = ({
   return (
     <div>
       <section>
-        <form onSubmit={handleSubmit} >
-          <input 
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <input
-            type="tel"
-            name="phone" 
-            placeholder="Phone Number (###-###-####)"
-            value={phone} 
-            onChange={(e) => setPhone(e.target.value)}
-            pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+        <form onSubmit={handleSubmit}>
+          <label>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder="Full Name"
+              required
+            />
+          </label>
+          <label>
+            <input
+              type="tel"
+              name="phone"
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
+              placeholder="Phone Number (###-###-####)"
+              required
+            />
+          </label>
+          <label>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder="Email Address"
+              required
+            />
+          </label>
           <input type="submit" value="Add Contact" />
         </form>
       </section>

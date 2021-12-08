@@ -18,7 +18,7 @@ function App() {
       ...contacts,
       {
         name: name,
-        phone:phone,
+        phone: phone,
         email: email
       }
     ]);
@@ -57,7 +57,7 @@ function App() {
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
             {/* Add props to AppointmentsPage */}
-            <AppointmentsPage appointments={appointments} addAppointment={addAppointment} />
+            <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />
           </Route>
         </Switch>
       </main>
